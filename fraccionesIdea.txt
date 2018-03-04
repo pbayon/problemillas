@@ -1,0 +1,7 @@
+1/n=1/a+1/b (1) puede reescribirse como (a-n)*(b-n)=n^2 (2). Luego, la respuesta a la pregunta de cuantas formas puede escrbirse 1/n
+como suma de dos fracciones 1/a+1/b(1) es equivalente a preguntarnos de cuantas formas puede expresarse n^2 como producto de dos números(2).
+Para responder a (2) debemos obtener el numero de divisores de n^2 (div(n^2)), y este número dividirlo entre dos, o sumarle 1 y 
+dividirlo entre 2 (si es impar). Si n^2=p1^e1*...*pk^ek --> div(n^2)=(e1+1)*...*(ek+1)-->numero de pares = (div(n^2)+1)/2
+no obstante no hace falta factorizar n^2. Si n = p1^e1*...*pk^ek entonces n^2=p1^2e1*...*pk^2ek,
+por tanto div(n^2)=(2*e1+1)*...*(2*ek+1). 
+Para factorizar n podemos servirnos de la criba de Eratóstenes
