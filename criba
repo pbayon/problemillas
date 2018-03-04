@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Fracciones {
+
+
+    public static int factorize(int n) {
+        int cont=1;
+        int t;
+        for(int i=0;i<prim.size();i++) {
+        	int primo=prim.get(i);
+        	t=0;
+        	while(n%primo==0) {
+        		n/=primo;
+        		t++;
+        	}
+        	if(t>0) cont*=(2*t+1);
+        }
+        return cont%2==0?cont/2:(cont+1)/2;
+    }
+    public static boolean [] primos =new boolean[(int)Math.pow(2,16)];
+    public static ArrayList<Integer> prim=new ArrayList<Integer>();
+    public static void main(String[] args) {
+    	for(int i=0;i<primos.length;i++) primos[i]=true;
+    	for(int i=2;i<=(int)Math.pow(2, 8);i++)
+    		if(primos[i]) {
+    			for(int j=2*i;j<primos.length;j+=i) {
+    				primos[j]=false;
+    			}
+    		}
+    	for(int i=2;i<primos.length;i++) {
+    		if(primos[i]) prim.add(i);
+    	}
+    	
+    			
+    	Scanner sc = new Scanner(System.in);
+    	int n;
+    	while(true) {
+    		try {
+    		n=sc.nextInt();
+    		}catch(Exception e) {break;}
+    		
+    		System.out.print(factorize(n));
+    		
+    		
+    		
+    		
+    	}
+    		
+        
+    }
+}
