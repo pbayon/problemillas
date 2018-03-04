@@ -95,7 +95,7 @@ public class Fracciones {
 					primos[j] = true;
 				}
 			}
-		for (int i = 2; i <= Math.pow(2, 8); i++) {
+		for (int i = 2; i < Math.pow(2, 16); i++) {
 			if (!primos[i])
 				prim.add(i);
 		}
